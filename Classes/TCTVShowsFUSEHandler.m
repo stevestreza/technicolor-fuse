@@ -9,8 +9,17 @@
 #import "TCTVShowsFUSEHandler.h"
 #import "TCTVShow.h"
 #import "TCTVEpisode.h"
+#import "TCVideoFile.h"
 
 @implementation TCTVShowsFUSEHandler
+
+-(id)init{
+	if(self = [super init]){
+		urlCache = [[NSMutableDictionary dictionary] retain];
+	}
+	return self;
+}
+
 -(BOOL)canHandlePath:(NSString *)path{
 	return ([path rangeOfString:@"/TV Shows"].location == 0);
 }
@@ -43,18 +52,24 @@
 				NSUInteger seasonNumber = (NSUInteger)([(NSString *)[[pathComponents objectAtIndex:2] substringFromIndex:[@"Season " length]] intValue]);
 				NSArray *episodes = [show episodesInSeason:seasonNumber];
 				for(TCTVEpisode *episode in episodes){
-					NSString *name = [NSString stringWithFormat:@"%ix%02i - %@",
+					
+					NSSet *videoFiles = [episode valueForKey:@"videoFiles"];		
+					TCVideoFile *videoFile = [videoFiles anyObject];
+					NSString *videoPath = [videoFile valueForKey:@"path"];
+					NSString *videoExtension = [videoPath pathExtension];
+					
+					NSString *name = [NSString stringWithFormat:@"%ix%02i - %@.%@",
 									  seasonNumber,
 									  [[episode valueForKeyPath:@"episodeNumber"] intValue],
-									  [episode valueForKeyPath:@"episodeName"]];
+									  [episode valueForKeyPath:@"episodeName"],
+									  videoExtension];
 					
 					NSLog(@"Adding %@ for %@",name,[show valueForKeyPath:@"showName"]);
 					
 					[movieNames addObject:name];
+					
+					[urlCache setObject:episode forKey:[path stringByAppendingPathComponent:name]];
 				}
-				//			}else{
-				
-				//			}
 			}
 		}
 	}
@@ -63,8 +78,23 @@
 
 - (NSDictionary *)attributesOfItemAtPath:(NSString *)path 
 								   error:(NSError **)error{
-	return [NSDictionary dictionaryWithObjectsAndKeys:
-			NSFileTypeDirectory, NSFileType,
-			nil];
+	NSArray *pathComponents = [path pathComponents];
+	pathComponents = [pathComponents subarrayWithRange:NSMakeRange(1, pathComponents.count-1)];
+
+	//TV Shows/South Park/Season 5/5x01 - Scott Tenorman Must Die.avi
+	if(pathComponents.count >= 4){
+		TCTVEpisode *episode = [urlCache objectForKey:path];
+		
+		NSSet *videoFiles = [episode valueForKey:@"videoFiles"];		
+		TCVideoFile *videoFile = [videoFiles anyObject];
+		NSString *videoPath = [videoFile valueForKey:@"path"];
+		NSDictionary *dict = [[NSFileManager defaultManager] attributesOfItemAtPath:videoPath error:error];
+		NSLog(@"attributes for %@ - %@",videoPath, dict);
+		return dict;
+	}else{
+		return [NSDictionary dictionaryWithObjectsAndKeys:
+				NSFileTypeDirectory, NSFileType,
+				nil];
+	}
 }
 @end

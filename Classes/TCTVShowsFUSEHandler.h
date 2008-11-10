@@ -10,7 +10,7 @@
 #import "TCFUSEHandler.h"
 
 @interface TCTVShowsFUSEHandler : TCFUSEHandler {
-
+	NSMutableDictionary *urlCache;
 }
 
 @end
