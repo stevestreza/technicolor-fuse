@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeTarget = 8D5B49AC048680CD000E48DA /* technicolor-fuse */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* technicolor-fuse */,
@@ -69,10 +69,14 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 247978596;
-			PBXWorkspaceStateSaveDate = 247978596;
+			PBXPerProjectTemplateStateSaveDate = 249029003;
+			PBXWorkspaceStateSaveDate = 249029003;
 		};
 		perUserProjectItems = {
+			1E3844560ED7D35F00DD6F43 /* PlistBookmark */ = 1E3844560ED7D35F00DD6F43 /* PlistBookmark */;
+			1E3844590ED7D35F00DD6F43 /* PlistBookmark */ = 1E3844590ED7D35F00DD6F43 /* PlistBookmark */;
+			1E38445A0ED7D35F00DD6F43 /* PBXTextBookmark */ = 1E38445A0ED7D35F00DD6F43 /* PBXTextBookmark */;
+			1E3845D70ED8AE2200DD6F43 /* PBXTextBookmark */ = 1E3845D70ED8AE2200DD6F43 /* PBXTextBookmark */;
 			1E4D75F90EC6575A005814A2 /* PBXTextBookmark */ = 1E4D75F90EC6575A005814A2 /* PBXTextBookmark */;
 			1E4D75FA0EC6575A005814A2 /* PBXTextBookmark */ = 1E4D75FA0EC6575A005814A2 /* PBXTextBookmark */;
 			1E4D76090EC65D83005814A2 /* PBXTextBookmark */ = 1E4D76090EC65D83005814A2 /* PBXTextBookmark */;
@@ -88,9 +92,6 @@
 			1E4D77C30EC6877B005814A2 /* PBXTextBookmark */ = 1E4D77C30EC6877B005814A2 /* PBXTextBookmark */;
 			1E4D77CF0EC6877B005814A2 /* PBXTextBookmark */ = 1E4D77CF0EC6877B005814A2 /* PBXTextBookmark */;
 			1E4D77D00EC6877B005814A2 /* PBXTextBookmark */ = 1E4D77D00EC6877B005814A2 /* PBXTextBookmark */;
-			1EA093E00EC7DA84004C7397 /* PBXTextBookmark */ = 1EA093E00EC7DA84004C7397 /* PBXTextBookmark */;
-			1EA0941B0EC7DDA2004C7397 /* PBXTextBookmark */ = 1EA0941B0EC7DDA2004C7397 /* PBXTextBookmark */;
-			1EA9D8C50EC74F2E0089B83F /* PBXTextBookmark */ = 1EA9D8C50EC74F2E0089B83F /* PBXTextBookmark */;
 			1EA9D8C70EC74F2E0089B83F /* PBXTextBookmark */ = 1EA9D8C70EC74F2E0089B83F /* PBXTextBookmark */;
 			1EA9D8CC0EC74F2E0089B83F /* PBXTextBookmark */ = 1EA9D8CC0EC74F2E0089B83F /* PBXTextBookmark */;
 			1EA9D9220EC75B600089B83F /* PBXTextBookmark */ = 1EA9D9220EC75B600089B83F /* PBXTextBookmark */;
@@ -98,10 +99,53 @@
 			1EA9D9240EC75B600089B83F /* PBXTextBookmark */ = 1EA9D9240EC75B600089B83F /* PBXTextBookmark */;
 			1EA9D9250EC75B600089B83F /* PBXTextBookmark */ = 1EA9D9250EC75B600089B83F /* PBXTextBookmark */;
 			1EA9D9260EC75B600089B83F /* PBXTextBookmark */ = 1EA9D9260EC75B600089B83F /* PBXTextBookmark */;
+			1EFAF7CC0ED25F9900A8B55E /* PBXTextBookmark */ = 1EFAF7CC0ED25F9900A8B55E /* PBXTextBookmark */;
 		};
 		sourceControlManager = 1EC0C8800EC653E70018771C /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	1E3844560ED7D35F00DD6F43 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/syco/Projects/technicolor-fuse/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1E3844590ED7D35F00DD6F43 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/syco/Projects/technicolor-fuse/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1E38445A0ED7D35F00DD6F43 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC0C8D60EC654C70018771C /* TCFUSEPlugin.m */;
+		name = "TCFUSEPlugin.m: 16";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 1257;
+		vrLoc = 0;
+	};
+	1E3845D70ED8AE2200DD6F43 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC0C8D60EC654C70018771C /* TCFUSEPlugin.m */;
+		name = "TCFUSEPlugin.m: 16";
+		rLen = 0;
+		rLoc = 293;
+		rType = 0;
+		vrLen = 1257;
+		vrLoc = 0;
 	};
 	1E4D75F90EC6575A005814A2 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -250,9 +294,9 @@
 	};
 	1E4D779E0EC6859B005814A2 /* TCTVShowsFUSEHandler.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1127, 1454}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1127, 1414}}";
 			sepNavSelRange = "{3291, 0}";
-			sepNavVisRange = "{2054, 1524}";
+			sepNavVisRange = "{0, 1459}";
 			sepNavWindowFrame = "{{15, -1}, {1439, 874}}";
 		};
 	};
@@ -336,42 +380,12 @@
 		delayBeforeContinue = 0;
 		fileReference = 1E4D779E0EC6859B005814A2 /* TCTVShowsFUSEHandler.m */;
 		functionName = "-attributesOfItemAtPath:error:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 86;
 		location = "technicolor-fuse";
-		modificationTime = 247979093.538107;
+		modificationTime = 249029085.985648;
 		state = 1;
-	};
-	1EA093E00EC7DA84004C7397 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1E4D779E0EC6859B005814A2 /* TCTVShowsFUSEHandler.m */;
-		name = "TCTVShowsFUSEHandler.m: 92";
-		rLen = 0;
-		rLoc = 3444;
-		rType = 0;
-		vrLen = 1584;
-		vrLoc = 1984;
-	};
-	1EA0941B0EC7DDA2004C7397 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1E4D779E0EC6859B005814A2 /* TCTVShowsFUSEHandler.m */;
-		name = "TCTVShowsFUSEHandler.m: 91";
-		rLen = 0;
-		rLoc = 3291;
-		rType = 0;
-		vrLen = 1588;
-		vrLoc = 1990;
-	};
-	1EA9D8C50EC74F2E0089B83F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1EC0C8D60EC654C70018771C /* TCFUSEPlugin.m */;
-		name = "TCFUSEPlugin.m: 65";
-		rLen = 0;
-		rLoc = 1896;
-		rType = 0;
-		vrLen = 530;
-		vrLoc = 1595;
 	};
 	1EA9D8C70EC74F2E0089B83F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -471,10 +485,20 @@
 	};
 	1EC0C8D60EC654C70018771C /* TCFUSEPlugin.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1123, 1050}}";
-			sepNavSelRange = "{1896, 0}";
-			sepNavVisRange = "{1595, 530}";
+			sepNavIntBoundsRect = "{{0, 0}, {1127, 1106}}";
+			sepNavSelRange = "{293, 0}";
+			sepNavVisRange = "{0, 1419}";
 		};
+	};
+	1EFAF7CC0ED25F9900A8B55E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E4D779E0EC6859B005814A2 /* TCTVShowsFUSEHandler.m */;
+		name = "TCTVShowsFUSEHandler.m: 91";
+		rLen = 0;
+		rLoc = 3291;
+		rType = 0;
+		vrLen = 1459;
+		vrLoc = 0;
 	};
 	8D5B49AC048680CD000E48DA /* technicolor-fuse */ = {
 		activeExec = 0;

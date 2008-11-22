@@ -16,6 +16,9 @@
 
 TCUUID(@"568DFAA7-CC50-4B74-81D9-B1B94DF67A42")
 
+//#define TCFUSEPluginEnabled
+#ifdef  TCFUSEPluginEnabled
+
 -(void)awake{
 	NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
 	[center addObserver:self selector:@selector(didMount:)
@@ -74,5 +77,7 @@ TCUUID(@"568DFAA7-CC50-4B74-81D9-B1B94DF67A42")
 	
 	[super dealloc];
 }
+
+#endif
 
 @end

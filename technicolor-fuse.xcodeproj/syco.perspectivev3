@@ -274,6 +274,7 @@
 								<string>089C166AFE841209C02AAC07</string>
 								<string>08FB77AFFE84173DC02AAC07</string>
 								<string>1EC0C8B40EC654310018771C</string>
+								<string>089C167CFE841241C02AAC07</string>
 								<string>089C1671FE841209C02AAC07</string>
 								<string>1058C7ACFEA557BF11CA2CBB</string>
 								<string>1EC0C8820EC653F10018771C</string>
@@ -282,6 +283,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>20</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -319,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1EC0C8E50EC656220018771C</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TCTVShowsFUSEHandler.m</string>
+								<string>TCFUSEPlugin.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,25 +330,26 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1EC0C8E60EC656220018771C</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TCTVShowsFUSEHandler.m</string>
+										<string>TCFUSEPlugin.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1EA0941B0EC7DDA2004C7397</string>
+										<string>1E3845D70ED8AE2200DD6F43</string>
 										<key>history</key>
 										<array>
 											<string>1E4D76090EC65D83005814A2</string>
 											<string>1E4D76A80EC66736005814A2</string>
 											<string>1E4D76BF0EC66910005814A2</string>
 											<string>1E4D77BB0EC6877B005814A2</string>
-											<string>1EA9D8C50EC74F2E0089B83F</string>
 											<string>1EA9D8C70EC74F2E0089B83F</string>
 											<string>1EA9D9220EC75B600089B83F</string>
 											<string>1EA9D9230EC75B600089B83F</string>
 											<string>1EA9D9240EC75B600089B83F</string>
 											<string>1EA9D9250EC75B600089B83F</string>
 											<string>1EA9D9260EC75B600089B83F</string>
-											<string>1EA093E00EC7DA84004C7397</string>
+											<string>1EFAF7CC0ED25F9900A8B55E</string>
+											<string>1E3844560ED7D35F00DD6F43</string>
+											<string>1E38445A0ED7D35F00DD6F43</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -361,6 +365,7 @@
 											<string>1E4D77CF0EC6877B005814A2</string>
 											<string>1E4D77D00EC6877B005814A2</string>
 											<string>1EA9D8CC0EC74F2E0089B83F</string>
+											<string>1E3844590ED7D35F00DD6F43</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -483,11 +488,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1EA093E20EC7DA84004C7397</string>
+				<string>1E3845490ED7E1B700DD6F43</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>1EA093E30EC7DA84004C7397</string>
+				<string>1E38454A0ED7E1B700DD6F43</string>
 				<string>1EC0C8E50EC656220018771C</string>
-				<string>1EA093E40EC7DA84004C7397</string>
+				<string>1E38454B0ED7E1B700DD6F43</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>

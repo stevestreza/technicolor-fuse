@@ -19,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E3845430ED7E1AB00DD6F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EC0C8BF0EC654720018771C /* Technicolor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1E3844660ED7D56800DD6F43 /* TCHTTPServerPlugin.tcplugin */;
+			remoteInfo = TCHTTPServerPlugin;
+		};
 		1EC0C8C80EC654720018771C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EC0C8BF0EC654720018771C /* Technicolor.xcodeproj */;
@@ -60,6 +67,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 1E5EF99D0EAC33BC006F064E;
 			remoteInfo = TCJSPlugin;
+		};
+		1EFAF7BA0ED25F0200A8B55E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EC0C8BF0EC654720018771C /* Technicolor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1EFAF7500ED25DF500A8B55E;
+			remoteInfo = TCXMLRPCServerPlugin;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -212,6 +226,8 @@
 				1EC0C8CF0EC654720018771C /* TCTVRagePlugin.tcplugin */,
 				1EC0C8D10EC654720018771C /* TCProcessingQueuePlugin.tcplugin */,
 				1EC0C8D30EC654720018771C /* TCJSPlugin.tcplugin */,
+				1EFAF7BB0ED25F0200A8B55E /* TCXMLRPCServerPlugin.tcplugin */,
+				1E3845440ED7E1AB00DD6F43 /* TCHTTPServerPlugin.tcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,6 +285,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1E3845440ED7E1AB00DD6F43 /* TCHTTPServerPlugin.tcplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TCHTTPServerPlugin.tcplugin;
+			remoteRef = 1E3845430ED7E1AB00DD6F43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1EC0C8C90EC654720018771C /* Technicolor.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
@@ -309,6 +332,13 @@
 			fileType = wrapper.cfbundle;
 			path = TCJSPlugin.tcplugin;
 			remoteRef = 1EC0C8D20EC654720018771C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EFAF7BB0ED25F0200A8B55E /* TCXMLRPCServerPlugin.tcplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TCXMLRPCServerPlugin.tcplugin;
+			remoteRef = 1EFAF7BA0ED25F0200A8B55E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
