@@ -16,7 +16,7 @@
 
 TCUUID(@"568DFAA7-CC50-4B74-81D9-B1B94DF67A42")
 
-//#define TCFUSEPluginEnabled
+#define TCFUSEPluginEnabled
 #ifdef  TCFUSEPluginEnabled
 
 -(void)awake{
@@ -68,6 +68,40 @@ TCUUID(@"568DFAA7-CC50-4B74-81D9-B1B94DF67A42")
 	}else{
 		return [rootHandler attributesOfItemAtPath:path error:error];
 	}
+}
+
+// BSD-equivalent: open(2)
+- (BOOL)openFileAtPath:(NSString *)path 
+                  mode:(int)mode
+          fileDelegate:(id *)fileDelegate
+                 error:(NSError **)error{
+	return [rootHandler openFileAtPath:path 
+								  mode:mode
+							  userData:fileDelegate
+								 error:error];
+}
+
+// BSD-equivalent: close(2)
+- (void)releaseFileAtPath:(NSString *)path fileDelegate:(id)fileDelegate{
+	[rootHandler releaseFileAtPath:path userData:fileDelegate];
+}
+
+// This is only called if the fileDelegate is nil or does not implement the 
+// readToBuffer:size:offset:error: method.
+//
+// BSD-equivalent: pread(2)
+- (int)readFileAtPath:(NSString *)path 
+         fileDelegate:(id)fileDelegate
+               buffer:(char *)buffer 
+                 size:(size_t)size 
+               offset:(off_t)offset
+                error:(NSError **)error{
+	return [rootHandler readFileAtPath:path 
+							  userData:fileDelegate 
+								buffer:buffer
+								  size:size 
+								offset:offset 
+								 error:error];
 }
 
 -(void)dealloc{

@@ -97,4 +97,21 @@
 				nil];
 	}
 }
+
+-(TCVideo *)videoAtPath:(NSString *)path{
+	TCVideo *video = nil;
+	for(NSString *key in [urlCache allKeys]){
+		if([path isEqualToString:key]){
+			video = [urlCache objectForKey:path];
+			break;
+		}
+	}
+	
+	if(!video){
+		video = [super videoAtPath:path];
+	}
+
+	return video;
+}
+
 @end

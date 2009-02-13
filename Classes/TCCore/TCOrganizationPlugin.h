@@ -25,10 +25,20 @@
 
 #import <Cocoa/Cocoa.h>
 #import <CoreFoundation/CoreFoundation.h>
+#import "Technicolor.h"
+
+@class TCOrganizationPluginManager;
 
 @interface TCOrganizationPlugin : NSObject {
 
 }
+
+-(CFUUIDRef)uuid;
+-(NSString *)uuidString;
+
++(BOOL)loadFrameworkAtPath:(NSString *)frameworkPath;
+
 +(CFUUIDRef)generateUUID;
+
 -(void)addViewController:(NSViewController *)controller forType:(NSString *)type;
 @end

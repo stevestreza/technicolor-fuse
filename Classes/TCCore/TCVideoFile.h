@@ -24,13 +24,22 @@
  */
 
 #import <Cocoa/Cocoa.h>
+#import "Technicolor.h"
 //#import "TCFFMPEGVideo.h"
 @class TCFFMPEGVideo;
 
 @interface TCVideoFile : NSManagedObject {
-
+	NSMutableDictionary *metadata;
 }
 
 +(TCVideoFile *)videoFileForPath:(NSString *)path;
++(NSArray *)allFilesWithoutVideos;
 
+-(NSString *)filename;
+-(NSString *)fileSizeString;
+
+-(TCFileSize)filesize;
+
+@property (readonly) NSString *filename;
+@property (readonly) NSString *fileSizeString;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "TCFUSEHandler.h"
-
+#import "TCVideo.h"
 
 @implementation TCFUSEHandler
 
@@ -84,4 +84,63 @@
 	return childHandlers.count;
 }
 
+- (BOOL)openFileAtPath:(NSString *)path 
+                  mode:(int)mode
+              userData:(id *)userData
+                 error:(NSError **)error {
+	NSLog(@"Opening path %@",path);
+	TCVideo *video = [self videoAtPath:path];
+	NSLog(@"Got video %@",video);
+	if(!video){
+		return NO;
+	}
+	
+	NSString* p = [[video anyFile] valueForKey:@"path"];
+	NSLog(@"Mapping \n%@\n  to\ %@",path,p);
+	if(!path){
+		return NO;
+	}
+	
+	int fd = open([p UTF8String], mode);
+	if ( fd < 0 ) {
+		*error = [NSError errorWithPOSIXCode:errno];
+		return NO;
+	}
+	NSLog(@"Opened %@ to fd %i",p,fd);
+	*userData = [NSNumber numberWithLong:fd];
+	return YES;
+}
+
+- (void)releaseFileAtPath:(NSString *)path userData:(id)userData {
+	NSNumber* num = (NSNumber *)userData;
+	int fd = [num longValue];
+	close(fd);
+}
+
+- (int)readFileAtPath:(NSString *)path 
+             userData:(id)userData
+               buffer:(char *)buffer 
+                 size:(size_t)size 
+               offset:(off_t)offset
+                error:(NSError **)error {
+	NSNumber* num = (NSNumber *)userData;
+	int fd = [num longValue];
+	int ret = pread(fd, buffer, size, offset);
+	if ( ret < 0 ) {
+		*error = [NSError errorWithPOSIXCode:errno];
+		return -1;
+	}
+	return ret;
+}	
+
+-(TCVideo *)videoAtPath:(NSString *)path{
+	TCVideo *video = nil;
+	for(TCFUSEHandler *handler in childHandlers){
+		if([handler canHandlePath:path]){
+			video = [handler videoAtPath:path];
+			break;
+		}
+	}
+	return video;
+}
 @end

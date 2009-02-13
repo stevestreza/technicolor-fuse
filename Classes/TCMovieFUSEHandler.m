@@ -33,4 +33,23 @@
 			nil];	
 }
 
+-(TCVideo *)videoAtPath:(NSString *)path{
+	TCVideo *video = nil;
+	
+	NSString *movieName = [[path substringFromIndex:[@"/Movies/" length]] stringByDeletingPathExtension];
+	
+	NSArray *movies = [TCMovieVideo videosForPredicate:[NSPredicate predicateWithFormat:@"movie.name == %@",movieName]];
+	for(TCMovieVideo *movie in movies){
+		if([[movie valueForKeyPath:@"movie.name"] isEqualToString:movieName]){
+			video = movie;
+		}
+	}
+	
+	if(!video){
+		video = [super videoAtPath:path];
+	}
+	
+	return video;
+}
+
 @end
